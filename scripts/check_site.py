@@ -15,9 +15,25 @@ class PageInspector(HTMLParser):
         self.language = None
         self.title_count = 0
         self.language_switches = 0
+        self.navigation = {}
+        self.active_navigation = None
+        self.current_pages = []
+        self.disclosure_count = 0
 
     def handle_starttag(self, tag, attributes):
         values = dict(attributes)
+        if tag == "nav":
+            self.active_navigation = next(
+                (name for name in values.get("class", "").split()
+                 if name in {"document-tabs", "menu-panel"}), None
+            )
+            self.navigation[self.active_navigation] = []
+        if tag == "details" and values.get("class") == "site-menu":
+            self.disclosure_count += 1
+        if tag == "a" and self.active_navigation:
+            self.navigation[self.active_navigation].append(values.get("href"))
+            if values.get("aria-current") == "page":
+                self.current_pages.append(values.get("href"))
         if tag == "html":
             self.language = values.get("lang")
         if tag == "h1":
@@ -31,6 +47,10 @@ class PageInspector(HTMLParser):
         for name in ("href", "src"):
             if name in values:
                 self.links.append(values[name])
+
+    def handle_endtag(self, tag):
+        if tag == "nav":
+            self.active_navigation = None
 
 
 def check():
@@ -47,6 +67,10 @@ def check():
         assert inspector.language == language, path
         assert inspector.title_count == 1, path
         assert inspector.language_switches == 1, path
+        assert inspector.disclosure_count == 1, path
+        assert inspector.navigation["document-tabs"] == inspector.navigation["menu-panel"], path
+        assert len(inspector.navigation["document-tabs"]) == 4, path
+        assert inspector.current_pages == [path.name, path.name], path
         assert metadata["version"] in content and metadata["status"] in content, path
         filename = next(name for name, value in DOCUMENTS.items() if value[0] == path.name)
         _, translations = read_document(filename)
@@ -72,7 +96,7 @@ def check():
         assert not raw.startswith(b"\xef\xbb\xbf"), f"Unexpected BOM: {path}"
         assert b"\r" not in raw and raw.endswith(b"\n"), path
         raw.decode("utf-8")
-    print("PASS: 8 pages, language links, internal links, metadata, source correspondence, UTF-8/LF")
+    print("PASS: 8 pages, matching menus, current-page markers, language/internal links, metadata, source correspondence, UTF-8/LF")
     print("External URLs and live Pages publication require separate verification.")
 
 

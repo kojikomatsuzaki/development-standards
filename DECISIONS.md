@@ -46,6 +46,15 @@
 - 代替案：外部APIとロジックの一体化、初めから多数の抽象化層を導入。
 - 再検討：責務、規模、変更頻度が増え、分割による効果が明確になった場合。
 
+## D007：二つの入口と読みやすい文章
+
+- 判断：言語ボタンの隣に「☰ メニュー」を置き、その下に文書メニューを常時表示する。上部全体をスクロール中も残し、狭い画面では文書メニューだけを横スクロールできるようにする。
+- 理由：既存の新荘音頭サイトと操作位置をそろえつつ、文書一覧が隠れる問題を補う。二つのメニューは同じ一覧から生成し、現在のページを両方で示す。
+- 代替案：ハンバーガーのみ、横並びメニューのみ。
+- 再検討：文書が増えた場合や、固定部分が閲覧を妨げる場合。今回はHTMLのdetailsを使い、閲覧時のJavaScriptを増やさない。
+- 文章方針：概要は目的と使い方、規約は守る行動を先に書く。理由と詳細を後に続け、現在の公開状態は概要にまとめる。承認・例外・データの保持に関する条件は削らない。
+- 依頼者の指示：2026-10-25の会話で、メニュー併用案と文章の書き直しを指示。規約全体の正式承認は引き続き未実施。
+
 <!-- language: en -->
 
 # Design decisions
@@ -93,3 +102,12 @@ Recorded: 2026-10-25. These are draft design records for initial construction, n
 - Reason: Limit protocol and dependency change impact while preserving readability and long-term maintenance.
 - Alternatives: Mix APIs with logic; introduce many abstraction layers immediately.
 - Reconsider when: Responsibilities, size, or change frequency make the benefit of separation clear.
+
+## D007: Two navigation paths and readable instructions
+
+- Decision: Place “☰ Menu” beside the language button and keep a document navigation row below it. Keep the header visible while scrolling; allow the document row to scroll horizontally on narrow screens.
+- Reason: Match the control position on the existing Shinsō Ondo site while keeping document choices discoverable. Generate both menus from the same list and mark the current page in each.
+- Alternatives: A hamburger menu alone; a document row alone.
+- Reconsider when: More documents are added or the fixed area obstructs reading. Use native HTML details without adding runtime JavaScript.
+- Writing approach: Start the overview with purpose and usage, and standards with required actions. Follow with reasons and details. Collect current publication status in the overview. Retain approval, exception, and data-preservation conditions.
+- Requester instruction: The requester authorized the combined navigation and rewriting in the 2026-10-25 conversation. Formal approval of the standards remains pending.

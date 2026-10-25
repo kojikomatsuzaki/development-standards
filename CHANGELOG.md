@@ -4,6 +4,8 @@
 
 ## 1.0.0 — Draft — 2026-10-25
 
+- 概要と規約を、行動・理由・詳細の順で読める文章に整理。英語対訳も更新。
+- ハンバーガーメニューと文書メニューを併用し、スクロール中も上部に表示。
 - AIエージェント向け共通開発規約の草案を作成。
 - 人が読めるコード、One Source, Multi Use、責務分離、Port / Adapter、コメント方針を明文化。
 - YAML、文字コード、日付、出典、不確実性、ライセンス選択の扱いを規定。
@@ -19,6 +21,8 @@
 
 ## 1.0.0 — Draft — 2026-10-25
 
+- Reorganized the overview and standards around actions, reasons, and details, with matching English.
+- Combined a hamburger menu with persistent document navigation.
 - Prepared draft shared development standards for AI agents.
 - Documented readable code, One Source, Multi Use, responsibilities, Ports / Adapters, and comment policy.
 - Defined handling of YAML, encoding, dates, provenance, uncertainty, and license selection.

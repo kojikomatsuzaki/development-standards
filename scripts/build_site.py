@@ -153,12 +153,18 @@ def render_page(filename, language, metadata, reference):
   <a class="skip-link" href="#content">{'Skip to content' if english else '本文へ移動'}</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Development Standards<span>共通開発規約</span></a>
-      <a class="language-switch" href="{other_language_url}" lang="{'ja' if english else 'en'}" hreflang="{'ja' if english else 'en'}">{'日本語' if english else 'English'}</a>
+      <a class="brand" href="index.html">共通開発規約<span>Development Standards</span></a>
+      <div class="header-actions">
+        <a class="language-switch" href="{other_language_url}" lang="{'ja' if english else 'en'}" hreflang="{'ja' if english else 'en'}">{'日本語' if english else 'English'}</a>
+        <details class="site-menu">
+          <summary><span aria-hidden="true">☰</span> {'Menu' if english else 'メニュー'}</summary>
+          <nav class="menu-panel" aria-label="{'Site menu' if english else 'サイト内メニュー'}">{navigation}</nav>
+        </details>
+      </div>
     </div>
+    <nav class="container document-tabs" aria-label="{'Documents' if english else '文書'}">{navigation}</nav>
   </header>
   <div class="container">
-    <nav aria-label="{'Documents' if english else '文書'}">{navigation}</nav>
     <aside class="standards-metadata" aria-label="{'Standards metadata' if english else '規約情報'}">
       <p class="status">{esc(notice)}</p>
       <dl>
