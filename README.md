@@ -13,7 +13,7 @@
 | [DECISIONS.md](DECISIONS.md) | 設計判断、理由、代替案、再検討条件 |
 | [CHANGELOG.md](CHANGELOG.md) | 版ごとの変更履歴 |
 
-公開先予定：<https://kojikomatsuzaki.github.io/development-standards/>。
+公開サイト：<https://kojikomatsuzaki.github.io/development-standards/>。
 GitHub：<https://github.com/kojikomatsuzaki/development-standards>。
 
 ## プロジェクトでの利用
@@ -77,7 +77,7 @@ This is the authoritative repository for shared development standards emphasizin
 | [DECISIONS.md](DECISIONS.md) | Decisions, reasons, alternatives, and reconsideration |
 | [CHANGELOG.md](CHANGELOG.md) | Changes by version |
 
-Intended publication: <https://kojikomatsuzaki.github.io/development-standards/>.
+Published site: <https://kojikomatsuzaki.github.io/development-standards/>.
 GitHub: <https://github.com/kojikomatsuzaki/development-standards>.
 
 ## Adoption in a project
