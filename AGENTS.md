@@ -1,11 +1,16 @@
 ---
 version: "1.0.0"
-status: Draft
+status: Approved
 established: "2026-10-25"
-revised: "2026-10-25"
+revised: "2026-10-26"
 author: "Hiroshi (Kōji) Komatsuzaki"
 authoritative_language: Japanese
-approval_record: null
+approval_record: "https://github.com/kojikomatsuzaki/development-standards/pull/4"
+approved_date: "2026-10-26"
+approved_by: "Hiroshi (Kōji) Komatsuzaki"
+approved_revision: "fef2d0598f1f828cf18265894d06b2b0de019486"
+approval_source: conversation
+approval_recorded_by: "ChatGPT (AI agent)"
 ---
 
 <!-- language: ja -->

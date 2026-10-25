@@ -46,7 +46,9 @@ https://github.com/kojikomatsuzaki/development-standards/blob/<承認対象SHA>/
 
 ## 現在の公開状態
 
-**現在は草案です。承認済みの版は、まだありません。** 正式承認前の草案を、承認済みとして採用しないでください。
+**Version 1.0.0は承認済み（Approved）です。** 小松崎浩司が会話で明示的に承認し、2026-10-26に状態へ反映しました。[承認記録](https://github.com/kojikomatsuzaki/development-standards/pull/4)には、承認対象のコミットと会話からの転記であることを記録しています。本人によるGitHubレビューとは区別します。
+
+規約本文の承認対象はコミット `fef2d0598f1f828cf18265894d06b2b0de019486` です。正式な状態と承認情報はAGENTS.md冒頭のYAMLで確認できます。ライセンスの決定や、他プロジェクトでの採用は別の判断です。
 
 - 版、状態、制定日、改訂日、著者は、AGENTS.md冒頭のYAMLで管理しています。各ページの規約情報も、ここから表示します。
 - 日本語が正本で、英語は対訳です。
@@ -131,7 +133,9 @@ If a project needs a local copy, retain the upstream version and SHA. It is not 
 
 ## Current publication status
 
-**This is a draft. No approved version exists yet.** Do not adopt an unapproved draft as approved.
+**Version 1.0.0 is Approved.** Hiroshi (Kōji) Komatsuzaki explicitly approved it in this conversation; the status was updated on 2026-10-26. The [approval record](https://github.com/kojikomatsuzaki/development-standards/pull/4) identifies the reviewed commit and states that AI transcribed the conversation. It is distinct from a GitHub review posted personally by the owner.
+
+The approved standards body is at commit `fef2d0598f1f828cf18265894d06b2b0de019486`. Check the opening YAML in AGENTS.md for status and approval metadata. License selection and adoption in another project remain separate decisions.
 
 - Version, status, dates, and author are managed in the opening YAML of AGENTS.md. Site metadata is generated from it.
 - Japanese is authoritative; English is a translation.
