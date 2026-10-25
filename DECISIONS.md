@@ -2,7 +2,7 @@
 
 # 設計判断
 
-記録日：2026-10-25。以下は初版構築時のDraft設計記録です。正式承認は未実施です。共通方針として依頼で指定された内容と、実装上選んだ方法を区別して記録します。
+記録開始日：2026-10-25。D001〜D008は草案段階の設計記録です。2026-10-26のVersion 1.0.0承認はD009に記録します。共通方針として依頼で指定された内容と、実装上選んだ方法を区別して記録します。
 
 ## D001：正本と日英対訳
 
@@ -64,11 +64,21 @@
 - 再検討：責任者の変更や共同運営への移行が決まった場合。変更内容と権限の範囲を記録し、明示的な承認を得て更新する。
 - 依頼者の指示：2026-10-25の会話で上記の責任者表記を確定し、反映を指示。規約全体の正式承認やライセンスの選択は引き続き未実施。
 
+## D009：会話での明示的な承認を記録してApprovedへ移行
+
+- 判断：小松崎浩司の「approvedに上げてよいよ」と、その後の「続きよろしく」という明示指示に基づき、Version 1.0.0をApprovedへ変更する。記録・状態反映日：2026-10-26。
+- 承認対象：コミット `fef2d0598f1f828cf18265894d06b2b0de019486` の規約本文（日英）。本文の意味や手順は変更しない。
+- 記録：[PR #4](https://github.com/kojikomatsuzaki/development-standards/pull/4)に、承認者、対象コミット、発言、会話からのAI転記であることを明記する。本人によるGitHubコメント・レビュー・手動マージとして扱わない。
+- 理由：今回は会話での明示指示を根拠として反映し、通常の本人によるGitHub承認手順との差を公開記録に残す。AIが独自に承認を決めたものではない。
+- 代替案：Draftの維持、本人によるGitHubレビューを待つ方法。
+- 範囲：状態・承認メタデータと、それに伴う概要・設計判断・変更履歴の更新。第10節の一般的な承認手順は変更しない。ライセンスは未決定のまま、他プロジェクトへの採用も行わない。
+- 再検討：承認対象本文の変更、承認内容の訂正・撤回、責任者変更が生じた場合。対象と影響を示し、小松崎浩司の判断を得る。
+
 <!-- language: en -->
 
 # Design decisions
 
-Recorded: 2026-10-25. These are draft design records for initial construction, not formal approval. They distinguish requested shared policies from implementation choices.
+Records started: 2026-10-25. D001–D008 describe draft-stage decisions. D009 records approval of Version 1.0.0 on 2026-10-26. Requested shared policies are distinguished from implementation choices.
 
 ## D001: Authoritative source and translations
 
@@ -129,3 +139,13 @@ Recorded: 2026-10-25. These are draft design records for initial construction, n
 - Alternative: Identify only a generic role such as “human” or “administrator.”
 - Reconsider when: A change of responsible person or joint operation is agreed. Record the change and scope of authority and obtain explicit approval before updating.
 - Requester instruction: The requester confirmed this wording and instructed implementation in the 2026-10-25 conversation. Formal approval of the standards as a whole and license selection remain pending.
+
+## D009: Record explicit conversational approval and promote to Approved
+
+- Decision: Promote Version 1.0.0 following Hiroshi (Kōji) Komatsuzaki's explicit instruction “approvedに上げてよいよ” and subsequent instruction “続きよろしく”. Recorded and applied on 2026-10-26.
+- Scope approved: The Japanese and English standards body at commit `fef2d0598f1f828cf18265894d06b2b0de019486`. Its meaning and procedures are unchanged.
+- Record: [PR #4](https://github.com/kojikomatsuzaki/development-standards/pull/4) identifies the approver, target commit, wording, and AI transcription from the conversation. It is not represented as a GitHub comment, review, or manual merge personally performed by the owner.
+- Reason: Apply this specific explicit instruction while recording the difference from the usual owner-originated GitHub approval procedure. AI did not independently decide approval.
+- Alternatives: Retain Draft; wait for a personally posted GitHub review.
+- Implementation scope: Status and approval metadata and corresponding overview, decision, and changelog updates. Section 10's general approval procedure is unchanged. License remains undecided; no other project adopts the standards.
+- Reconsider when: The approved body changes, approval is corrected or withdrawn, or responsibility changes. Identify the target and impact and obtain the owner's decision.
