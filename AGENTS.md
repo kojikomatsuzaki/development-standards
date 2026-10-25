@@ -114,7 +114,7 @@ YAMLを正本にする場合は、項目名、型、必須・任意、識別子�
 
 意味が変わる修正を、誤記訂正として扱いません。Draftの編集はコミットで区別します。正式承認前に承認済みのタグを発行せず、承認済みタグは移動しません。訂正は新版で行います。
 
-## 10. 変更案を示し、小松崎浩司の承認を残す
+## 10. AIは変更案を提案し、小松崎浩司が承認を判断する
 
 AIは改善を提案できます。規範を変えるときはPRを作り、理由、影響、版、検証結果を示してください。依頼で許可された草案作成を除き、小松崎浩司の承認なしに変更を確定しません。
 
@@ -243,7 +243,7 @@ Use **MAJOR.MINOR.PATCH**:
 
 Do not label substantive changes as typo fixes. Identify draft edits by commit. Do not issue approved tags before formal approval or move approved tags afterward. Publish corrections as new versions.
 
-## 10. Propose changes and retain approval from Hiroshi (Kōji) Komatsuzaki
+## 10. AI proposes changes; Hiroshi (Kōji) Komatsuzaki decides whether to approve them
 
 AI may suggest improvements. For normative changes, create a PR explaining rationale, impact, version, and verification. Except for explicitly authorized draft preparation, do not finalize changes without approval from Hiroshi (Kōji) Komatsuzaki.
 
