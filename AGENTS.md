@@ -14,6 +14,8 @@ approval_record: null
 
 **人が読みやすく、長く使い続けられるコードとデータを作ってください。** この文書は、そのためにAIエージェントが守る共通の約束です。日本語を正本とし、英語は対訳です。
 
+規約の正式承認、ライセンスの決定、各プロジェクトへの規約の採用・更新は、小松崎浩司が判断します。AIは、そのための調査、比較、提案、実装を支援します。
+
 ## 1. 作業前に、使う規約を確認する
 
 対象プロジェクトのAGENTS.mdを読み、採用した規約の版とコミットを確認してください。READMEと設計判断も確認します。
@@ -83,9 +85,9 @@ YAMLを正本にする場合は、項目名、型、必須・任意、識別子�
 - 翻訳でルールの意味を変えません。日英に食い違いがあれば、日本語を確認して修正します。
 - 史資料の文字と仮名遣いは、そのプロジェクトの翻刻凡例に従います。根拠なくUnicode正規化や文字の置換をしません。
 
-## 8. ライセンスは人間が選ぶ
+## 8. ライセンスは小松崎浩司が決定する
 
-プロジェクトごとに候補を検討し、人間の承認を得てからライセンスを設定してください。ソフトウェアではMITを最初の候補にしますが、自動では決めません。
+ライセンスは、プロジェクトごとに小松崎浩司自身の判断で決定します。AIは候補の比較や提案を行い、小松崎浩司の承認を得てから設定してください。ソフトウェアではMITを最初の候補にしますが、自動では決めません。
 
 文章、画像、データなどは、対象と権利者を整理し、必要なら別の条件を検討します。CC BY-SA 4.0なども候補の一つです。
 
@@ -100,7 +102,7 @@ YAMLを正本にする場合は、項目名、型、必須・任意、識別子�
 - 規約のリポジトリURL、版、コミットSHA、承認記録URL。
 - 採用日、プロジェクト固有の追加・例外とその理由。
 
-`main` や `latest` だけを指定せず、特定の版とコミットを固定します。共通規約が更新されても、採用した版は自動で変更しません。更新はプロジェクトごとに提案し、人間の承認を得てください。過去の作業へ遡って適用しません。
+`main` や `latest` だけを指定せず、特定の版とコミットを固定します。共通規約が更新されても、採用した版は自動で変更しません。更新はプロジェクトごとに提案し、小松崎浩司の承認を得てください。過去の作業へ遡って適用しません。
 
 版番号は **MAJOR.MINOR.PATCH** で管理します。
 
@@ -112,18 +114,18 @@ YAMLを正本にする場合は、項目名、型、必須・任意、識別子�
 
 意味が変わる修正を、誤記訂正として扱いません。Draftの編集はコミットで区別します。正式承認前に承認済みのタグを発行せず、承認済みタグは移動しません。訂正は新版で行います。
 
-## 10. 変更案を示し、人間の承認を残す
+## 10. 変更案を示し、小松崎浩司の承認を残す
 
-AIは改善を提案できます。規範を変えるときはPRを作り、理由、影響、版、検証結果を示してください。依頼で許可された草案作成を除き、人間の承認なしに変更を確定しません。
+AIは改善を提案できます。規範を変えるときはPRを作り、理由、影響、版、検証結果を示してください。依頼で許可された草案作成を除き、小松崎浩司の承認なしに変更を確定しません。
 
 承認では、**誰が、どのコミットの、何を承認したか**をGitHub上で追跡できるようにします。
 
-- 権限のある人間の明示的な承認を残します。CIの成功やAIによるマージは、承認の代わりになりません。
-- 単独管理者が自分のPRをレビュー承認できない場合は、本人が対象SHAと承認内容をPRにコメントし、本人によるマージ記録と結び付けます。
+- 小松崎浩司本人の明示的な承認を残します。CIの成功やAIによるマージは、承認の代わりになりません。
+- 小松崎浩司が自分のPRをレビュー承認できない場合は、本人が対象SHAと承認内容をPRにコメントし、本人によるマージ記録と結び付けます。
 - 承認後に差分が変わったら、再承認を受けます。
 - 承認記録URL、対象SHA、承認者、日付を記録します。承認欄・状態だけの更新と、本文の追加変更を区別してください。
 
-状態は **Draft（草案）** または **Approved（承認済み）** です。DraftからApprovedへの変更、ライセンス確定、既存ファイルの大規模変更、他プロジェクトへの適用には事前承認が必要です。初版の構築や公開だけで、正式承認を得たとは扱いません。
+状態は **Draft（草案）** または **Approved（承認済み）** です。DraftからApprovedへの変更、ライセンス確定、既存ファイルの大規模変更、他プロジェクトへの適用には、小松崎浩司の事前承認が必要です。初版の構築や公開だけで、正式承認を得たとは扱いません。
 
 SSH署名は任意です。AIに管理者の秘密鍵を渡しません。ブランチ保護やrulesetで承認を強制する場合は、利用可否を確認します。未設定なら、そのことを明示してください。
 
@@ -133,13 +135,15 @@ SSH署名は任意です。AIに管理者の秘密鍵を渡しません。ブラ
 
 必要に応じて、データ契約、Adapterの互換性、正本と生成物の対応、文字と出典の保持を確認します。報告には、実施内容、変更ファイル、検証結果、未検証事項、未完了事項を分けて書いてください。
 
-権限や機能がなく実施できなかったことを、実施済みと説明しません。人間の承認記録を捏造しません。
+権限や機能がなく実施できなかったことを、実施済みと説明しません。小松崎浩司の承認記録を捏造しません。
 
 <!-- language: en -->
 
 # Development standards
 
 **Create code and data that people can understand and maintain for years.** These are the shared rules AI agents must follow to do so. Japanese is authoritative; English is a translation.
+
+Hiroshi (Kōji) Komatsuzaki decides formal approval, license selection, and adoption or updates of these standards in each project. AI supports the research, comparison, proposals, and implementation needed for those decisions.
 
 ## 1. Check the adopted rules before working
 
@@ -210,9 +214,9 @@ Use UTF-8 without BOM, LF line endings, and a final newline by default.
 - Do not alter rules through translation. Resolve discrepancies against Japanese.
 - Follow project transcription rules for historical characters and orthography. Do not normalize Unicode or replace characters without evidence.
 
-## 8. Let a human select the license
+## 8. Hiroshi (Kōji) Komatsuzaki decides the license
 
-Consider licenses for each project and obtain human approval before setting one. MIT is the first software candidate, never an automatic choice.
+Hiroshi (Kōji) Komatsuzaki decides the license for each project. AI compares and proposes candidates and must obtain his approval before setting a license. MIT is the first software candidate, never an automatic choice.
 
 Identify the scope and rights holders for text, images, data, and other materials. Consider separate terms when appropriate. CC BY-SA 4.0 is also only a candidate.
 
@@ -227,7 +231,7 @@ Choose an approved version and record in the project's AGENTS.md:
 - The standards repository URL, version, commit SHA, and approval URL.
 - The adoption date, project additions or exceptions, and their reasons.
 
-Do not point only to `main` or `latest`. Pin a particular version and commit. A shared standards update does not automatically change a project's adopted version. Propose and obtain human approval for each project's update. Do not apply it retroactively.
+Do not point only to `main` or `latest`. Pin a particular version and commit. A shared standards update does not automatically change a project's adopted version. Propose each project's update and obtain approval from Hiroshi (Kōji) Komatsuzaki. Do not apply it retroactively.
 
 Use **MAJOR.MINOR.PATCH**:
 
@@ -239,18 +243,18 @@ Use **MAJOR.MINOR.PATCH**:
 
 Do not label substantive changes as typo fixes. Identify draft edits by commit. Do not issue approved tags before formal approval or move approved tags afterward. Publish corrections as new versions.
 
-## 10. Propose changes and retain human approval
+## 10. Propose changes and retain approval from Hiroshi (Kōji) Komatsuzaki
 
-AI may suggest improvements. For normative changes, create a PR explaining rationale, impact, version, and verification. Except for explicitly authorized draft preparation, do not finalize changes without human approval.
+AI may suggest improvements. For normative changes, create a PR explaining rationale, impact, version, and verification. Except for explicitly authorized draft preparation, do not finalize changes without approval from Hiroshi (Kōji) Komatsuzaki.
 
 Make **who approved what at which commit** traceable on GitHub.
 
-- Retain explicit approval from an authorized human. Passing CI or an AI-performed merge is not approval.
-- If a sole maintainer cannot approve their own PR through a review, they post an explicit comment identifying the SHA and scope and link it to their own merge record.
+- Retain explicit approval from Hiroshi (Kōji) Komatsuzaki himself. Passing CI or an AI-performed merge is not approval.
+- If Hiroshi (Kōji) Komatsuzaki cannot approve his own PR through a review, he posts an explicit comment identifying the SHA and scope and links it to his own merge record.
 - Obtain renewed approval if the diff changes afterward.
 - Record the approval URL, target SHA, approver, and date. Distinguish approval-field or status-only updates from further body changes.
 
-Status is **Draft** or **Approved**. Prior approval is required for Draft→Approved, license selection, large existing-file changes, and adoption in other projects. Initial construction or publication alone does not constitute formal approval.
+Status is **Draft** or **Approved**. Prior approval from Hiroshi (Kōji) Komatsuzaki is required for Draft→Approved, license selection, large existing-file changes, and adoption in other projects. Initial construction or publication alone does not constitute formal approval.
 
 SSH signing is optional. Never give an AI the administrator's private key. Check availability before enforcing approval through branch protection or rulesets. Disclose when enforcement is not configured.
 
@@ -260,4 +264,4 @@ Keep diffs small and avoid unrelated formatting or replacement. Preserve existin
 
 Where relevant, check data contracts, adapter compatibility, source/output correspondence, and preservation of characters and provenance. Distinguish completed work, changed files, verification results, unverified items, and outstanding work.
 
-Do not claim unavailable operations were performed or fabricate human approval records.
+Do not claim unavailable operations were performed or fabricate approval records from Hiroshi (Kōji) Komatsuzaki.
