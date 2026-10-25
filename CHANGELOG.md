@@ -2,6 +2,13 @@
 
 # 変更履歴
 
+## 1.0.0 — Approved — 2026-10-26
+
+- 小松崎浩司の会話での明示的な指示に基づき、Version 1.0.0を正式承認済みに変更。
+- 承認対象の本文はコミット `fef2d0598f1f828cf18265894d06b2b0de019486`。規約本文の変更はなく、状態・承認記録と関連する公開案内を更新。
+- 承認の原発言は「approvedに上げてよいよ」、継続指示は「続きよろしく」。AIがGitHubに転記した記録であり、本人がGitHubで投稿したレビューではない。
+- ライセンスは引き続き未決定。既存の他プロジェクトへの採用・遡及適用は行わない。
+
 ## 1.0.0 — Draft — 2026-10-25
 
 - リポジトリとPagesの開発・管理・運用責任者を小松崎浩司と明記。承認・判断の担当者とAIの支援範囲を整理。
@@ -20,6 +27,13 @@
 <!-- language: en -->
 
 # Changelog
+
+## 1.0.0 — Approved — 2026-10-26
+
+- Promoted Version 1.0.0 to Approved following Hiroshi (Kōji) Komatsuzaki's explicit instruction in this conversation.
+- The approved body is at commit `fef2d0598f1f828cf18265894d06b2b0de019486`. No normative body changes; only status, approval records, and related publication guidance are updated.
+- The original instruction was “approvedに上げてよいよ”, followed by “続きよろしく”. AI transcribed this record to GitHub; it is not a review posted personally by the owner on GitHub.
+- License remains undecided. No adoption or retroactive application in other existing projects is performed.
 
 ## 1.0.0 — Draft — 2026-10-25
 
