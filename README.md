@@ -6,12 +6,16 @@
 
 コードを書く人も、AIに開発を頼む人も、まず[開発規約](AGENTS.md)をご覧ください。
 
+## 責任者とAIの役割
+
+本GitHub RepositoryおよびPagesの開発・管理・運用責任者は、小松崎浩司です。規約の正式承認、ライセンスの決定、各プロジェクトへの規約の採用・更新は、小松崎浩司が判断します。AIは、そのための調査、比較、提案、実装を支援します。
+
 ## 何を大切にするか
 
 - **人が読めること**：意味の分かる名前を付け、設計の理由を残します。
 - **正本を一つにすること**：同じデータから、WebやCSVなどを作ります。
 - **長く保守できること**：役割を分け、必要以上に複雑にしません。
-- **人間が判断すること**：規約の変更と採用には、人間の承認を残します。
+- **判断と責任を明確にすること**：規約の変更と採用には、小松崎浩司の承認を残します。
 
 ## どの文書を読むか
 
@@ -28,9 +32,9 @@
 
 1. 承認済みの規約から、使う版を選びます。
 2. プロジェクトのAGENTS.mdに、版、コミットSHA、承認記録URL、採用日を記録します。固有の追加・例外と理由も書きます。
-3. 人間が採用を承認します。
+3. 小松崎浩司が採用を承認します。
 
-共通規約が更新されても、採用する版は自動で変わりません。更新する場合は、プロジェクトごとに影響を確認して承認します。過去の作業へ遡って適用しません。
+共通規約が更新されても、採用する版は自動で変わりません。更新する場合は、プロジェクトごとに影響を確認し、小松崎浩司が承認します。過去の作業へ遡って適用しません。
 
 固定参照の形式は次のとおりです。`<承認対象SHA>` を、実際に承認したコミットに置き換えます。
 
@@ -55,9 +59,9 @@ https://github.com/kojikomatsuzaki/development-standards/blob/<承認対象SHA>/
 
 ## 修正を提案するには
 
-PRに、変更理由、影響、対象版、検証結果を書いてください。規範の変更は、人間の承認を得て確定します。詳しい手順は[開発規約の第10節](AGENTS.md)にあります。PRのひな型は `.github/pull_request_template.md` です。
+PRに、変更理由、影響、対象版、検証結果を書いてください。規範の変更は、小松崎浩司の承認を得て確定します。詳しい手順は[開発規約の第10節](AGENTS.md)にあります。PRのひな型は `.github/pull_request_template.md` です。
 
-公開やマージだけで、規約を正式承認したとは扱いません。DraftからApprovedへの変更、ライセンス確定、正式タグ発行は、それぞれ必要な承認を経て行います。
+公開やマージだけで、規約を正式承認したとは扱いません。DraftからApprovedへの変更、ライセンス確定、正式タグ発行は、それぞれ小松崎浩司の承認を経て行います。
 
 ## サイトを保守するには
 
@@ -87,12 +91,16 @@ This site publishes the development rules shared by my projects. **They help us 
 
 Whether you write code or ask AI to develop it, start with the [development standards](AGENTS.md).
 
+## Responsibility and the role of AI
+
+Hiroshi (Kōji) Komatsuzaki is responsible for the development, management, and operation of this GitHub repository and its Pages site. He decides formal approval, license selection, and adoption or updates of these standards in each project. AI supports the research, comparison, proposals, and implementation needed for those decisions.
+
 ## What matters
 
 - **Readability**: choose meaningful names and retain design reasons.
 - **One authoritative source**: generate Web, CSV, and other outputs from the same data.
 - **Long-term maintenance**: separate responsibilities and avoid unnecessary complexity.
-- **Human decisions**: retain human approval for changes and adoption.
+- **Clear decisions and responsibility**: retain approval from Hiroshi (Kōji) Komatsuzaki for changes and adoption.
 
 ## Which document to read
 
@@ -109,9 +117,9 @@ The document navigation stays visible as you scroll. On narrow screens, scroll i
 
 1. Choose a formally approved version.
 2. Record its version, commit SHA, approval URL, and adoption date in the project's AGENTS.md. Include project additions or exceptions and reasons.
-3. Obtain human approval for adoption.
+3. Obtain approval from Hiroshi (Kōji) Komatsuzaki for adoption.
 
-Shared standards updates do not automatically change a project's adopted version. Assess and approve each project's update separately. Do not apply changes retroactively.
+Shared standards updates do not automatically change a project's adopted version. Assess each project's update separately and obtain approval from Hiroshi (Kōji) Komatsuzaki. Do not apply changes retroactively.
 
 Use this fixed-reference format, replacing `<approved-SHA>` with an actual approved commit:
 
@@ -136,9 +144,9 @@ Authoritative repository: <https://github.com/kojikomatsuzaki/development-standa
 
 ## How to propose a correction
 
-Explain the rationale, impact, target version, and verification in a PR. Obtain human approval before finalizing normative changes. See [section 10 of the standards](AGENTS.md). The PR template is `.github/pull_request_template.md`.
+Explain the rationale, impact, target version, and verification in a PR. Obtain approval from Hiroshi (Kōji) Komatsuzaki before finalizing normative changes. See [section 10 of the standards](AGENTS.md). The PR template is `.github/pull_request_template.md`.
 
-Publication or merging alone is not formal approval. Approved status, license selection, and formal tags each require the applicable approval.
+Publication or merging alone is not formal approval. Approved status, license selection, and formal tags each require approval from Hiroshi (Kōji) Komatsuzaki.
 
 ## How to maintain the site
 

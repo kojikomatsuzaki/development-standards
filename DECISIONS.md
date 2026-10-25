@@ -27,17 +27,17 @@
 
 ## D004：承認とバージョン固定
 
-- 判断：人間の明示的なGitHub記録を承認の根拠にし、SSH署名は任意とする。承認済み版・SHAをプロジェクトごとに採用する。
+- 判断：小松崎浩司本人の明示的なGitHub記録を承認の根拠にし、SSH署名は任意とする。承認済み版・SHAをプロジェクトごとに採用する。
 - 理由：判断した人と対象差分を追跡し、予期しない遡及適用を防ぐ。単独管理者でも明示コメントと本人のマージ記録を使う。
 - 代替案：署名付きタグの必須化、mainへの追従、AI判断のみの確定。
 - 再検討：共同管理、監査要件、GitHubの権限・プランや保護機能が変わる場合。レビュー強制設定はまだ未設定。
 
 ## D005：ライセンスは保留
 
-- 判断：リポジトリのライセンスを今回確定しない。プロジェクトごとに権利対象と用途を確認し、人間が選ぶ。
+- 判断：リポジトリのライセンスを今回確定しない。プロジェクトごとに権利対象と用途を確認し、小松崎浩司が選ぶ。
 - 理由：ソフトウェア、規約文章、データでは目的と条件が異なる。
 - 代替案：MITへの統一、コンテンツを含めCC BY-SA 4.0で一括指定。
-- 再検討：対象、権利者、候補、互換性を整理したPRを人間が承認したとき。
+- 再検討：対象、権利者、候補、互換性を整理したPRを小松崎浩司が承認したとき。
 
 ## D006：責務分離と必要十分な構成
 
@@ -54,6 +54,15 @@
 - 再検討：文書が増えた場合や、固定部分が閲覧を妨げる場合。今回はHTMLのdetailsを使い、閲覧時のJavaScriptを増やさない。
 - 文章方針：概要は目的と使い方、規約は守る行動を先に書く。理由と詳細を後に続け、現在の公開状態は概要にまとめる。承認・例外・データの保持に関する条件は削らない。
 - 依頼者の指示：2026-10-25の会話で、メニュー併用案と文章の書き直しを指示。規約全体の正式承認は引き続き未実施。
+
+## D008：開発・管理・運用責任者を明記する
+
+- 判断：本GitHub RepositoryおよびPagesの開発・管理・運用責任者を、小松崎浩司と明記する。規約の正式承認、ライセンスの決定、各プロジェクトへの規約の採用・更新も、小松崎浩司が判断する。
+- 理由：「人間の承認」だけでは判断する人が特定できないため。責任の範囲を、規約の管理からリポジトリと公開サイトの開発・管理・運用全体へ明示する。
+- AIの役割：調査、比較、提案、実装を支援し、判断に必要な根拠、不確実な点、未確認事項を示す。
+- 代替案：「人間」「管理者」などの一般的な役割名だけを記載する。
+- 再検討：責任者の変更や共同運営への移行が決まった場合。変更内容と権限の範囲を記録し、明示的な承認を得て更新する。
+- 依頼者の指示：2026-10-25の会話で上記の責任者表記を確定し、反映を指示。規約全体の正式承認やライセンスの選択は引き続き未実施。
 
 <!-- language: en -->
 
@@ -84,17 +93,17 @@ Recorded: 2026-10-25. These are draft design records for initial construction, n
 
 ## D004: Approval and fixed adoption
 
-- Decision: Use explicit human GitHub records; SSH signing is optional. Each project adopts an approved version and SHA.
+- Decision: Use explicit GitHub approval records from Hiroshi (Kōji) Komatsuzaki; SSH signing is optional. Each project adopts an approved version and SHA.
 - Reason: Trace the decision maker and reviewed diff, preventing unexpected retroactive changes. A sole maintainer can use an explicit comment and their own merge record.
 - Alternatives: Mandatory signed tags, following main, or AI-only approval.
 - Reconsider when: Collaboration, audit requirements, permissions, plans, or protection features change. Mandatory review enforcement is not configured yet.
 
 ## D005: License deferred
 
-- Decision: Do not select this repository's license now. Humans select project licenses after examining scope and intended use.
+- Decision: Do not select this repository's license now. Hiroshi (Kōji) Komatsuzaki selects project licenses after examining scope and intended use.
 - Reason: Software, standards text, and data may require different terms.
 - Alternatives: MIT for everything; CC BY-SA 4.0 for all content.
-- Reconsider when: A human approves a PR identifying scope, rights holders, candidates, and compatibility.
+- Reconsider when: Hiroshi (Kōji) Komatsuzaki approves a PR identifying scope, rights holders, candidates, and compatibility.
 
 ## D006: Responsibilities and sufficient simplicity
 
@@ -111,3 +120,12 @@ Recorded: 2026-10-25. These are draft design records for initial construction, n
 - Reconsider when: More documents are added or the fixed area obstructs reading. Use native HTML details without adding runtime JavaScript.
 - Writing approach: Start the overview with purpose and usage, and standards with required actions. Follow with reasons and details. Collect current publication status in the overview. Retain approval, exception, and data-preservation conditions.
 - Requester instruction: The requester authorized the combined navigation and rewriting in the 2026-10-25 conversation. Formal approval of the standards remains pending.
+
+## D008: Name the person responsible for development, management, and operation
+
+- Decision: Identify Hiroshi (Kōji) Komatsuzaki as responsible for the development, management, and operation of this GitHub repository and its Pages site. He also decides formal approval, license selection, and adoption or updates of these standards in each project.
+- Reason: “Human approval” does not identify who decides. State responsibility for the development, management, and operation of the repository and public site, beyond standards administration alone.
+- AI's role: Support research, comparison, proposals, and implementation; present evidence, uncertainty, and unverified items needed for decisions.
+- Alternative: Identify only a generic role such as “human” or “administrator.”
+- Reconsider when: A change of responsible person or joint operation is agreed. Record the change and scope of authority and obtain explicit approval before updating.
+- Requester instruction: The requester confirmed this wording and instructed implementation in the 2026-10-25 conversation. Formal approval of the standards as a whole and license selection remain pending.

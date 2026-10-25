@@ -9,12 +9,14 @@
 - [ ] 既存プロジェクトへ自動・遡及適用しない / No automatic or retroactive adoption
 - [ ] ライセンスを無断確定していない / No unapproved license selection
 
-## 人間の承認記録 / Human approval record
+## 小松崎浩司の承認記録 / Approval record from Hiroshi (Kōji) Komatsuzaki
 
 承認対象SHA / Reviewed SHA:
 
-承認者・日付・記録URL / Approver, date, record URL:
+承認者：小松崎浩司 / Approver: Hiroshi (Kōji) Komatsuzaki
 
-AIはこの欄に人間の承認を代筆・捏造しません。単独管理者は本人の明示コメントとマージ記録を使用できます。承認後の差分変更には再承認が必要です。
+承認日・記録URL / Approval date and record URL:
 
-AI must not fabricate human approval. A sole maintainer may use their explicit comment and merge record. Further changes require renewed approval.
+AIはこの欄に小松崎浩司の承認を代筆・捏造しません。本人が自分のPRをレビュー承認できない場合は、本人の明示コメントとマージ記録を使用できます。承認後の差分変更には再承認が必要です。
+
+AI must not fabricate approval from Hiroshi (Kōji) Komatsuzaki. If he cannot approve his own PR through a review, he may use his explicit comment and merge record. Further changes require renewed approval.

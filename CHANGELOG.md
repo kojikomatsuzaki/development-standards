@@ -4,6 +4,8 @@
 
 ## 1.0.0 — Draft — 2026-10-25
 
+- リポジトリとPagesの開発・管理・運用責任者を小松崎浩司と明記。承認・判断の担当者とAIの支援範囲を整理。
+
 - 概要と規約を、行動・理由・詳細の順で読める文章に整理。英語対訳も更新。
 - ハンバーガーメニューと文書メニューを併用し、スクロール中も上部に表示。
 - AIエージェント向け共通開発規約の草案を作成。
@@ -20,6 +22,8 @@
 # Changelog
 
 ## 1.0.0 — Draft — 2026-10-25
+
+- Named Hiroshi (Kōji) Komatsuzaki as responsible for repository and Pages development, management, and operation; clarified decision authority and AI support.
 
 - Reorganized the overview and standards around actions, reasons, and details, with matching English.
 - Combined a hamburger menu with persistent document navigation.
