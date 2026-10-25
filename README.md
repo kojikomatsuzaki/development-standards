@@ -1,43 +1,71 @@
 <!-- language: ja -->
 
-# 共通開発規約 / Development Standards
+# この規約について
 
-可読性、保守性、長期的な再利用を重視する開発規約の正本リポジトリです。日本語を正本、英語を対訳とします。初版はDraftであり、承認済みの規約はまだありません。現在の版・状態・制定日・改訂日・著者は [AGENTS.md](AGENTS.md) 冒頭のYAMLを参照してください。
+このサイトでは、私のプロジェクトに共通する開発の約束を公開しています。**人が読みやすく、長く使い続けられるコードとデータを作るための規約**です。
 
-## 文書
+コードを書く人も、AIに開発を頼む人も、まず[開発規約](AGENTS.md)をご覧ください。
 
-| 文書 | 役割 |
+## 何を大切にするか
+
+- **人が読めること**：意味の分かる名前を付け、設計の理由を残します。
+- **正本を一つにすること**：同じデータから、WebやCSVなどを作ります。
+- **長く保守できること**：役割を分け、必要以上に複雑にしません。
+- **人間が判断すること**：規約の変更と採用には、人間の承認を残します。
+
+## どの文書を読むか
+
+| 知りたいこと | 文書 |
 | --- | --- |
-| [AGENTS.md](AGENTS.md) | AIエージェント向け共通開発規約と版のメタデータ |
-| [README.md](README.md) | 目的、使い方、構築・公開方法 |
-| [DECISIONS.md](DECISIONS.md) | 設計判断、理由、代替案、再検討条件 |
-| [CHANGELOG.md](CHANGELOG.md) | 版ごとの変更履歴 |
+| 開発で守ること | [開発規約 / AGENTS.md](AGENTS.md) |
+| このサイトの目的と使い方 | [概要 / README.md](README.md) |
+| なぜこの設計にしたか | [設計判断 / DECISIONS.md](DECISIONS.md) |
+| 何が変わったか | [変更履歴 / CHANGELOG.md](CHANGELOG.md) |
 
-公開サイト：<https://kojikomatsuzaki.github.io/development-standards/>。
-GitHub：<https://github.com/kojikomatsuzaki/development-standards>。
+上部の文書メニューは、スクロールしても表示されます。狭い画面では左右にスクロールできます。右上の「☰ メニュー」からも同じ文書を選べます。日本語と英語は、右上の言語ボタンで切り替えます。
 
-## プロジェクトでの利用
+## プロジェクトで使うには
 
-1. 正式承認後の規約を読み、採用する特定版を選びます。現在のDraftを承認済みとして採用しません。
-2. プロジェクト固有のAGENTS.mdに、採用版、コミットSHA、承認記録URL、採用日、追加・例外を記録します。
-3. 採用を人間が承認します。mainの最新版を継続的に読み込むだけの運用はしません。
-4. 更新は各プロジェクトで影響を確認して承認します。既存プロジェクトへ自動・遡及適用しません。
+1. 承認済みの規約から、使う版を選びます。
+2. プロジェクトのAGENTS.mdに、版、コミットSHA、承認記録URL、採用日を記録します。固有の追加・例外と理由も書きます。
+3. 人間が採用を承認します。
 
-固定参照は `https://github.com/kojikomatsuzaki/development-standards/blob/<承認対象SHA>/AGENTS.md` の形式です。実在する承認対象SHAで置換し、仮の値を承認記録として扱いません。規約本文をプロジェクト内へ配置する場合は、上流版とSHAを併記し、複製を独立した正本にしません。
+共通規約が更新されても、採用する版は自動で変わりません。更新する場合は、プロジェクトごとに影響を確認して承認します。過去の作業へ遡って適用しません。
 
-## 変更と承認
+固定参照の形式は次のとおりです。`<承認対象SHA>` を、実際に承認したコミットに置き換えます。
 
-規範変更はPRで提案し、人間の承認を得ます。PRには対象コミット、理由、影響、版、検証結果を記載します。単独管理者の場合は本人による明示コメントとマージ記録を使えます。詳細は [AGENTS.md](AGENTS.md) 第10節を参照してください。Approvedへの変更、ライセンス確定、正式タグ発行は初期構築に含めません。
+```text
+https://github.com/kojikomatsuzaki/development-standards/blob/<承認対象SHA>/AGENTS.md
+```
 
-`.github/pull_request_template.md` は確認事項のひな型です。`.github/CODEOWNERS` はレビュー担当の意思表示であり、ブランチ保護の設定ではありません。現時点で強制レビューを設定済みとは主張しません。GitHubの権限・プランによる設定可否を確認したうえで導入を検討します。
+規約をプロジェクト内へコピーする場合も、上流の版とSHAを併記します。コピーを別の正本にはしません。`main` や `latest` だけを指定する運用は避けてください。
 
-## 構成とOne Source, Multi Use
+## 現在の公開状態
 
-4つのMarkdownを `scripts/build_site.py` が読み込み、日英別のHTMLを `_site/` に生成します。各文書の `<!-- language: ja -->` と `<!-- language: en -->` が言語境界です。両言語を同じMarkdownで対訳管理し、表示用の規約本文は別管理しません。版の表示はAGENTS.md冒頭のYAMLから生成します。`assets/style.css` は1ファイル、生成時にコピーされます。閲覧時の外部CDNやGitHub API、JavaScriptは不要です。
+**現在は草案です。承認済みの版は、まだありません。** 正式承認前の草案を、承認済みとして採用しないでください。
 
-## ローカル構築
+- 版、状態、制定日、改訂日、著者は、AGENTS.md冒頭のYAMLで管理しています。各ページの規約情報も、ここから表示します。
+- 日本語が正本で、英語は対訳です。
+- このリポジトリのライセンスは未決定です。MITやCC BY-SA 4.0などの採用は、まだ承認していません。
+- レビューを強制するブランチ保護は未設定です。CODEOWNERSは担当者を示すファイルで、保護設定そのものではありません。
 
-Python 3.12を基準にします。作業ディレクトリで以下を実行してください。
+公開サイト：<https://kojikomatsuzaki.github.io/development-standards/>
+
+正本リポジトリ：<https://github.com/kojikomatsuzaki/development-standards>
+
+## 修正を提案するには
+
+PRに、変更理由、影響、対象版、検証結果を書いてください。規範の変更は、人間の承認を得て確定します。詳しい手順は[開発規約の第10節](AGENTS.md)にあります。PRのひな型は `.github/pull_request_template.md` です。
+
+公開やマージだけで、規約を正式承認したとは扱いません。DraftからApprovedへの変更、ライセンス確定、正式タグ発行は、それぞれ必要な承認を経て行います。
+
+## サイトを保守するには
+
+4つのMarkdownが本文の正本です。`scripts/build_site.py` が日英のHTMLを生成し、GitHub ActionsがPagesへ公開します。本文をHTMLに転記して管理する必要はありません。
+
+各Markdownでは、行頭の `<!-- language: ja -->` と `<!-- language: en -->` で言語を分けます。CSSは `assets/style.css` の1ファイルです。文書メニューはHTMLとCSSで動き、閲覧時のJavaScript、外部CDN、GitHub APIは使いません。
+
+Python 3.12を基準に、次のコマンドで構築・検証できます。
 
 ```sh
 python -m venv .venv
@@ -47,61 +75,78 @@ python -m venv .venv
 .venv/bin/python -m http.server 8000 --directory _site
 ```
 
-`http://localhost:8000/` を開き、各文書・日英切替・スマートフォン幅を確認します。生成物 `_site/` はコミットしません。依存パッケージの版はrequirements.txtに固定し、更新時に再検証します。
+`http://localhost:8000/` を開き、文書間の移動、日英切替、狭い画面での操作を確認します。生成先の `_site/` はコミットしません。依存パッケージの版は `requirements.txt` に固定し、更新時に再検証します。依存パッケージには、それぞれのライセンスが適用されます。そのコードは、このリポジトリに同梱していません。
 
-## GitHub Pagesの公開
-
-1. publicリポジトリ `kojikomatsuzaki/development-standards` に本ファイル群を配置します。ライセンスは選択しません。
-2. Settings → Pages → Build and deployment → Source を **GitHub Actions** にします。
-3. mainへのpushで `.github/workflows/pages.yml` が検証・生成・公開します。PRでは検証のみ実行します。
-4. Actionsの成功、公開ページ、4文書の日英切替、原文と履歴へのリンクを確認します。
-
-公開はDraftの閲覧用です。Pagesのトップは常にmainの現在の文書を示すため、プロジェクトの固定採用には使用しません。公開サイトにはビルド対象コミットへのリンクを表示します。
-
-## ライセンス
-
-**未決定・承認待ち**です。今回、LICENSEを追加せず、MITやCC BY-SA 4.0等を確定しません。第三者の依存パッケージはそれぞれのライセンスに従います。このリポジトリにそれらのコードは同梱しません。
+Pagesの公開元は **GitHub Actions** です。mainへのpushで検証・公開し、PRでは検証だけを行います。公開後はActionsの成功とリンクを確認してください。公開サイトは現在のmainを表示し、ビルド対象コミットにもリンクします。規約を特定版で採用する際は、公開トップではなく固定参照を使います。
 
 <!-- language: en -->
 
-# Development Standards
+# About these standards
 
-This is the authoritative repository for shared development standards emphasizing readability, maintainability, and long-term reuse. Japanese is authoritative; English is a parallel translation. The initial version is a draft; no approved standards version exists yet. See the opening YAML in [AGENTS.md](AGENTS.md) for current version, status, establishment date, revision date, and author.
+This site publishes the development rules shared by my projects. **They help us create code and data that people can understand and maintain for years.**
 
-## Documents
+Whether you write code or ask AI to develop it, start with the [development standards](AGENTS.md).
 
-| Document | Purpose |
+## What matters
+
+- **Readability**: choose meaningful names and retain design reasons.
+- **One authoritative source**: generate Web, CSV, and other outputs from the same data.
+- **Long-term maintenance**: separate responsibilities and avoid unnecessary complexity.
+- **Human decisions**: retain human approval for changes and adoption.
+
+## Which document to read
+
+| What you want to know | Document |
 | --- | --- |
-| [AGENTS.md](AGENTS.md) | Shared standards for AI agents and version metadata |
-| [README.md](README.md) | Purpose, usage, build, and publication |
-| [DECISIONS.md](DECISIONS.md) | Decisions, reasons, alternatives, and reconsideration |
-| [CHANGELOG.md](CHANGELOG.md) | Changes by version |
+| Rules to follow during development | [Standards / AGENTS.md](AGENTS.md) |
+| Purpose and use of this site | [Overview / README.md](README.md) |
+| Reasons behind the design | [Decisions / DECISIONS.md](DECISIONS.md) |
+| What changed | [Changelog / CHANGELOG.md](CHANGELOG.md) |
 
-Published site: <https://kojikomatsuzaki.github.io/development-standards/>.
-GitHub: <https://github.com/kojikomatsuzaki/development-standards>.
+The document navigation stays visible as you scroll. On narrow screens, scroll it horizontally. The “☰ Menu” at the top right opens the same document choices. The language button switches between Japanese and English.
 
-## Adoption in a project
+## How to adopt the standards
 
-1. Read and select a particular formally approved version. Do not adopt this draft as approved.
-2. Record the version, commit SHA, approval URL, adoption date, and additions or exceptions in the project's AGENTS.md.
-3. Obtain human approval for adoption. Do not continuously adopt whatever main currently contains.
-4. Assess and approve updates for each project. Never apply them automatically or retroactively.
+1. Choose a formally approved version.
+2. Record its version, commit SHA, approval URL, and adoption date in the project's AGENTS.md. Include project additions or exceptions and reasons.
+3. Obtain human approval for adoption.
 
-Use a fixed reference of the form `https://github.com/kojikomatsuzaki/development-standards/blob/<approved-SHA>/AGENTS.md`, replacing the placeholder with an actual approved commit. Placeholders are not approval records. If a project needs a local copy, retain upstream version and SHA; it is not an independent authoritative source.
+Shared standards updates do not automatically change a project's adopted version. Assess and approve each project's update separately. Do not apply changes retroactively.
 
-## Changes and approval
+Use this fixed-reference format, replacing `<approved-SHA>` with an actual approved commit:
 
-Propose normative changes through a PR and obtain human approval. State the target commit, rationale, impact, version, and verification. A sole maintainer may use their explicit comment and merge record. See section 10 of [AGENTS.md](AGENTS.md). Approved status, license selection, and formal release tags are outside initial construction.
+```text
+https://github.com/kojikomatsuzaki/development-standards/blob/<approved-SHA>/AGENTS.md
+```
 
-The PR template supports review. CODEOWNERS expresses review ownership but does not configure branch protection. Mandatory reviews are not claimed to be enforced. Consider enforcement after checking GitHub permissions and plan support.
+If a project needs a local copy, retain the upstream version and SHA. It is not a separate authoritative source. Do not adopt only `main` or `latest`.
 
-## Structure and One Source, Multi Use
+## Current publication status
 
-`scripts/build_site.py` reads the four Markdown documents and generates Japanese and English HTML in `_site/`. Markers `<!-- language: ja -->` and `<!-- language: en -->` separate the parallel translations in each source. No separately maintained display copy of the standards exists. Version metadata comes from the YAML in AGENTS.md. A single `assets/style.css` is copied during generation. Reading requires no external CDN, GitHub API, or JavaScript.
+**This is a draft. No approved version exists yet.** Do not adopt an unapproved draft as approved.
 
-## Local build
+- Version, status, dates, and author are managed in the opening YAML of AGENTS.md. Site metadata is generated from it.
+- Japanese is authoritative; English is a translation.
+- This repository's license remains undecided. Neither MIT nor CC BY-SA 4.0 has been approved.
+- Mandatory review enforcement is not configured. CODEOWNERS identifies ownership; it does not configure branch protection.
 
-Python 3.12 is the baseline. Run in this directory:
+Published site: <https://kojikomatsuzaki.github.io/development-standards/>
+
+Authoritative repository: <https://github.com/kojikomatsuzaki/development-standards>
+
+## How to propose a correction
+
+Explain the rationale, impact, target version, and verification in a PR. Obtain human approval before finalizing normative changes. See [section 10 of the standards](AGENTS.md). The PR template is `.github/pull_request_template.md`.
+
+Publication or merging alone is not formal approval. Approved status, license selection, and formal tags each require the applicable approval.
+
+## How to maintain the site
+
+The four Markdown documents are authoritative. `scripts/build_site.py` generates Japanese and English HTML, and GitHub Actions publishes it to Pages. No manually maintained HTML copy of the body is needed.
+
+Separate languages with standalone lines `<!-- language: ja -->` and `<!-- language: en -->`. CSS lives in `assets/style.css`. Navigation uses HTML and CSS; reading requires no JavaScript, external CDN, or GitHub API.
+
+Python 3.12 is the baseline. Build and check with:
 
 ```sh
 python -m venv .venv
@@ -111,17 +156,6 @@ python -m venv .venv
 .venv/bin/python -m http.server 8000 --directory _site
 ```
 
-Open `http://localhost:8000/` and inspect all documents, language switching, and mobile widths. Do not commit `_site/`. Dependency versions are pinned in requirements.txt and must be rechecked when updated.
+Open `http://localhost:8000/` and check document navigation, language switching, and narrow-screen controls. Do not commit `_site/`. Dependencies are pinned in `requirements.txt`; recheck when updating them. Dependencies retain their own licenses; their code is not bundled here.
 
-## GitHub Pages publication
-
-1. Put these files in the public repository `kojikomatsuzaki/development-standards` without choosing a license.
-2. Set Settings → Pages → Build and deployment → Source to **GitHub Actions**.
-3. On a push to main, `.github/workflows/pages.yml` verifies, builds, and deploys. Pull requests run verification only.
-4. Check Actions, the public page, all four documents in both languages, and source/history links.
-
-Publication makes the draft readable. The site tracks current main and is not the fixed reference used for adoption. The site links to its exact build commit.
-
-## License
-
-**Undecided; awaiting approval.** No LICENSE is added and neither MIT nor CC BY-SA 4.0 is selected. Third-party build dependencies retain their own licenses; their code is not bundled here.
+The Pages source is **GitHub Actions**. Pushes to main verify and publish; PRs only verify. Check Actions and links after publication. The site displays current main and links to its build commit. Use a fixed reference rather than the public homepage when adopting a standards version.
